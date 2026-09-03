@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LA REINA 832</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LA REINA 832</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
-    }
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#111;
+color:white;
+text-align:center;
+}
 
-    header {
-      padding: 40px 20px;
-    }
+header{
+padding:50px 20px;
+}
 
-    .corona {
-      font-size: 70px;
-    }
+.corona{
+font-size:70px;
+}
 
-    h1 {
-      font-size: 32px;
-      margin: 10px 0;
-    }
+h1{
+font-size:36px;
+margin:15px 0;
+}
 
-    p {
-      font-size: 18px;
-    }
+p{
+font-size:18px;
+}
 
-    .boton {
-      display: block;
-      width: 80%;
-      max-width: 350px;
-      margin: 30px auto;
-      padding: 18px;
-      border-radius: 15px;
-      background: white;
-      color: #111;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  </style>
+.boton{
+margin:35px auto;
+padding:18px;
+max-width:320px;
+border-radius:15px;
+background:white;
+color:#111;
+font-size:18px;
+font-weight:bold;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="corona">👑</div>
+<header>
 
-    <h1>LA REINA 832</h1>
+<div class="corona">👑</div>
 
-    <p>QUINIELA ONLINE</p>
+<h1>LA REINA 832</h1>
 
-    <p>🎟️ Tu agencia de confianza</p>
+<p>QUINIELA ONLINE</p>
 
-    <div class="boton">
-      🎰 CARGAR MI JUGADA
-    </div>
-  </header>
+<p>✨ Tu agencia de confianza ✨</p>
+
+<div class="boton">
+🎟️ CARGAR MI JUGADA
+</div>
+
+</header>
 
 </body>
 </html>
