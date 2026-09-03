@@ -3,117 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#111111">
   <title>LA REINA 832</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px;
+    }
+
+    .corona {
+      font-size: 70px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .boton {
+      display: block;
+      width: 80%;
+      max-width: 350px;
+      margin: 30px auto;
+      padding: 18px;
+      border-radius: 15px;
+      background: white;
+      color: #111;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
-    <div class="logo">👑</div>
+    <div class="corona">👑</div>
+
     <h1>LA REINA 832</h1>
+
     <p>QUINIELA ONLINE</p>
+
+    <p>🎟️ Tu agencia de confianza</p>
+
+    <div class="boton">
+      🎰 CARGAR MI JUGADA
+    </div>
   </header>
 
-  <main>
-
-    <section class="bienvenida">
-      <h2>🎟️ JUGÁ AHORA</h2>
-      <p>Armá tu jugada de manera rápida y sencilla.</p>
-
-      <button onclick="mostrarJugada()">
-        🎰 CARGAR MI JUGADA
-      </button>
-    </section>
-
-    <section id="jugada" class="tarjeta" style="display:none;">
-
-      <h2>🎟️ MI JUGADA</h2>
-
-      <label>Sorteo</label>
-      <select id="sorteo">
-        <option>La Previa</option>
-        <option>Primera</option>
-        <option>Matutina</option>
-        <option>Vespertina</option>
-        <option>Nocturna</option>
-      </select>
-
-      <label>Lotería</label>
-      <select id="loteria">
-        <option>Córdoba</option>
-        <option>Ciudad</option>
-        <option>Provincia</option>
-        <option>Santa Fe</option>
-        <option>Entre Ríos</option>
-        <option>Corrientes</option>
-        <option>Mendoza</option>
-        <option>Chaco</option>
-      </select>
-
-      <label>Número</label>
-      <input
-        type="text"
-        id="numero"
-        maxlength="4"
-        placeholder="Ej: 832"
-        inputmode="numeric"
-      >
-
-      <label>Modalidad</label>
-      <select id="modalidad">
-        <option>2 cifras</option>
-        <option>3 cifras</option>
-        <option>4 cifras</option>
-      </select>
-
-      <label>Monto</label>
-      <input
-        type="number"
-        id="monto"
-        placeholder="$"
-        min="1"
-      >
-
-      <button onclick="confirmarJugada()">
-        ✅ CONFIRMAR JUGADA
-      </button>
-
-    </section>
-
-    <section id="pago" class="tarjeta" style="display:none;">
-
-      <h2>💳 TRANSFERENCIA</h2>
-
-      <p>Para confirmar tu jugada realizá la transferencia:</p>
-
-      <div class="datos">
-        <p><strong>ALIAS</strong></p>
-        <p id="alias">TU ALIAS</p>
-
-        <p><strong>CBU</strong></p>
-        <p id="cbu">TU CBU</p>
-
-        <p><strong>TITULAR</strong></p>
-        <p id="titular">TU TITULAR</p>
-      </div>
-
-      <button onclick="enviarWhatsApp()">
-        📲 YA REALICÉ LA TRANSFERENCIA
-      </button>
-
-    </section>
-
-  </main>
-
-  <footer>
-    👑 LA REINA 832<br>
-    <small>Tu agencia de confianza</small>
-  </footer>
-
-  <script src="script.js"></script>
-
 </body>
-          </html>
- 
+</html>
