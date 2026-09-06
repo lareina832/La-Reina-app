@@ -809,74 +809,108 @@ contenedor.appendChild(div);
 }
 
 
-/* =========================
-   CREAR JUGADA
-========================= */
 
-function crearJugada(){
+<!-- CARGAR JUGADA -->
+<section id="jugada" class="section">
 
-const seleccionadas=[];
+    <h2>🎟️ CARGAR MI JUGADA</h2>
+    <p class="subtitulo">Elegí tus números y las quinielas</p>
 
-document.querySelectorAll(
-"#listaQuinielas input[type='checkbox']:checked"
-).forEach(function(check){
+    <div id="jugadasContainer">
 
-seleccionadas.push(check.value);
+        <!-- JUGADA 1 -->
+        <div class="jugada-card">
 
-});
+            <div class="jugada-header">
+                <strong>🎟️ JUGADA 1</strong>
+                <button type="button" class="btn-eliminar" onclick="eliminarJugada(this)">
+                    🗑️
+                </button>
+            </div>
 
+            <label>NÚMERO</label>
 
-if(seleccionadas.length===0){
+            <input
+                type="text"
+                class="numero-jugada"
+                inputmode="numeric"
+                maxlength="4"
+                placeholder="Ej: 32"
+                oninput="soloNumeros(this)"
+            >
 
-alert("Seleccioná al menos una quiniela.");
+            <label>QUINIELAS</label>
 
-return;
+            <div class="acciones-quinielas">
+                <button type="button" onclick="seleccionarTodas(this)">
+                    SELECCIONAR TODAS
+                </button>
 
-}
+                <button type="button" onclick="limpiarQuinielas(this)">
+                    LIMPIAR
+                </button>
+            </div>
 
+            <div class="quinielas-grid">
 
-const numero=
-document.getElementById("numeroJugada")
-.value.trim();
+                <label><input type="checkbox" value="NACIONAL"> NACIONAL</label>
+                <label><input type="checkbox" value="PROVINCIA"> PROVINCIA</label>
+                <label><input type="checkbox" value="SANTA FE"> SANTA FE</label>
+                <label><input type="checkbox" value="CÓRDOBA"> CÓRDOBA</label>
+                <label><input type="checkbox" value="ENTRE RÍOS"> ENTRE RÍOS</label>
+                <label><input type="checkbox" value="MENDOZA"> MENDOZA</label>
+                <label><input type="checkbox" value="CORRIENTES"> CORRIENTES</label>
+                <label><input type="checkbox" value="CHACO"> CHACO</label>
+                <label><input type="checkbox" value="CATAMARCA"> CATAMARCA</label>
+                <label><input type="checkbox" value="CHUBUT"> CHUBUT</label>
+                <label><input type="checkbox" value="FORMOSA"> FORMOSA</label>
+                <label><input type="checkbox" value="JUJUY"> JUJUY</label>
+                <label><input type="checkbox" value="LA RIOJA"> LA RIOJA</label>
+                <label><input type="checkbox" value="MISIONES"> MISIONES</label>
+                <label><input type="checkbox" value="PARAGUAY"> PARAGUAY</label>
+                <label><input type="checkbox" value="RÍO NEGRO"> RÍO NEGRO</label>
+                <label><input type="checkbox" value="SAN LUIS"> SAN LUIS</label>
+                <label><input type="checkbox" value="SANTIAGO"> SANTIAGO</label>
+                <label><input type="checkbox" value="TUCUMÁN"> TUCUMÁN</label>
+                <label><input type="checkbox" value="MONTEVIDEO"> MONTEVIDEO</label>
+                <label><input type="checkbox" value="URUGUAY"> URUGUAY</label>
 
+            </div>
 
-const modalidad=
-document.getElementById("modalidad")
-.value;
+            <label>MODALIDAD</label>
 
+            <select class="modalidad-jugada">
+                <option value="Primera">Primera</option>
+                <option value="Matutina">Matutina</option>
+                <option value="Vespertina">Vespertina</option>
+                <option value="Nocturna">Nocturna</option>
+                <option value="Previa">Previa</option>
+            </select>
 
-const monto=
-document.getElementById("monto")
-.value;
+            <label>MONTO</label>
 
+            <input
+                type="number"
+                class="monto-jugada"
+                placeholder="$"
+                min="0"
+            >
 
-if(numero===""){
+        </div>
 
-alert("Ingresá un número.");
+    </div>
 
-return;
+    <button type="button" class="btn-agregar" onclick="agregarJugada()">
+        ➕ AGREGAR OTRO NÚMERO
+    </button>
 
-}
+    <button type="button" class="btn-confirmar" onclick="confirmarJugadas()">
+        ✅ CONFIRMAR JUGADAS
+    </button>
 
+    <div id="resumenJugadas"></div>
 
-if(!/^[0-9]{1,4}$/.test(numero)){
-
-alert("El número debe contener solamente números.");
-
-return;
-
-}
-
-
-const numeroFinal=
-numero.padStart(4,"0");
-
-
-const resumen=
-document.getElementById("resumenJugada");
-
-
-resumen.innerHTML=`
+</section>
 
 <b>🎟️ RESUMEN DE JUGADA</b><br><br>
 
