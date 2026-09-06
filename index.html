@@ -1,419 +1,401 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LA REINA 832</title>
+<title>LA REINA 832</title><style>
+*{box-sizing:border-box}
 
-<style>
-*{
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:
-        radial-gradient(circle at top,#3b174d 0%,#15101c 35%,#08080b 100%);
-    color:white;
-    min-height:100vh;
+margin:0;
+font-family:Arial,sans-serif;
+background:radial-gradient(circle at top,#3b174d 0%,#15101c 35%,#08080b 100%);
+color:white;
+min-height:100vh;
 }
 
-button,
-input,
-select{
-    font:inherit;
-}
-
-button{
-    cursor:pointer;
-}
+button,input,select{font:inherit}
+button{cursor:pointer}
 
 .container{
-    width:92%;
-    max-width:900px;
-    margin:auto;
+width:92%;
+max-width:900px;
+margin:auto;
 }
 
-/* HEADER */
-
 header{
-    text-align:center;
-    padding:35px 15px 25px;
+text-align:center;
+padding:35px 15px 25px;
 }
 
 .corona{
-    font-size:70px;
-    filter:drop-shadow(0 0 18px rgba(255,215,0,.45));
-    animation:flotar 3s ease-in-out infinite;
+font-size:70px;
+filter:drop-shadow(0 0 18px rgba(255,215,0,.45));
+animation:flotar 3s ease-in-out infinite;
 }
 
 @keyframes flotar{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-8px)}
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
 }
 
 .logo{
-    font-size:42px;
-    font-weight:900;
-    letter-spacing:2px;
-    margin:8px 0;
+font-size:42px;
+font-weight:900;
+letter-spacing:2px;
+margin:8px 0;
 }
 
-.logo span{
-    color:#ffd84d;
-}
+.logo span{color:#ffd84d}
 
 .subtitulo{
-    color:#ddd;
-    font-size:17px;
-    margin:8px 0;
+color:#ddd;
+font-size:17px;
+margin:8px 0;
 }
 
-/* ONLINE */
-
 .online{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    margin-top:15px;
-    padding:9px 15px;
-    border-radius:30px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.12);
-    font-size:14px;
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-top:15px;
+padding:9px 15px;
+border-radius:30px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+font-size:14px;
 }
 
 .punto{
-    width:10px;
-    height:10px;
-    background:#35e66d;
-    border-radius:50%;
-    box-shadow:0 0 10px #35e66d;
+width:10px;
+height:10px;
+background:#35e66d;
+border-radius:50%;
+box-shadow:0 0 10px #35e66d;
 }
-
-/* MENU */
 
 .menu{
-    display:flex;
-    gap:10px;
-    overflow-x:auto;
-    padding:8px 0 18px;
-    scrollbar-width:none;
+display:flex;
+gap:10px;
+overflow-x:auto;
+padding:8px 0 18px;
+scrollbar-width:none;
 }
 
-.menu::-webkit-scrollbar{
-    display:none;
-}
+.menu::-webkit-scrollbar{display:none}
 
 .menu button{
-    flex:0 0 auto;
-    border:0;
-    padding:12px 17px;
-    border-radius:25px;
-    color:white;
-    background:#211a29;
-    border:1px solid #3c3146;
+flex:0 0 auto;
+border:0;
+padding:12px 17px;
+border-radius:25px;
+color:white;
+background:#211a29;
+border:1px solid #3c3146;
 }
-
-.menu button:hover{
-    background:#352441;
-}
-
-/* CARDS */
 
 .card{
-    background:rgba(255,255,255,.07);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:24px;
-    padding:22px;
-    margin:18px 0;
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-    backdrop-filter:blur(10px);
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.1);
+border-radius:24px;
+padding:22px;
+margin:18px 0;
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+backdrop-filter:blur(10px);
 }
 
-.card h2{
-    margin-top:0;
-}
+.card h2{margin-top:0}
 
 .destacado{
-    background:linear-gradient(135deg,#35143e,#1c1027);
+background:linear-gradient(135deg,#35143e,#1c1027);
 }
 
 .numero-caliente{
-    font-size:70px;
-    font-weight:900;
-    color:#ff3d68;
-    text-shadow:0 0 25px rgba(255,61,104,.45);
-    margin:10px 0;
+font-size:70px;
+font-weight:900;
+color:#ff3d68;
+text-shadow:0 0 25px rgba(255,61,104,.45);
+margin:10px 0;
 }
 
-/* BOTONES */
-
 .boton-principal{
-    width:100%;
-    border:0;
-    padding:17px;
-    border-radius:16px;
-    background:linear-gradient(135deg,#ffd84d,#ff9f1c);
-    color:#18120a;
-    font-weight:900;
-    font-size:18px;
-    box-shadow:0 8px 25px rgba(255,180,40,.25);
+width:100%;
+border:0;
+padding:17px;
+border-radius:16px;
+background:linear-gradient(135deg,#ffd84d,#ff9f1c);
+color:#18120a;
+font-weight:900;
+font-size:18px;
+box-shadow:0 8px 25px rgba(255,180,40,.25);
 }
 
 .boton-secundario{
-    border:1px solid #5b4b63;
-    background:#211a29;
-    color:white;
-    padding:14px 18px;
-    border-radius:14px;
-    font-weight:bold;
+border:1px solid #5b4b63;
+background:#211a29;
+color:white;
+padding:14px 18px;
+border-radius:14px;
+font-weight:bold;
 }
 
 .boton-rojo{
-    border:0;
-    background:#e83b61;
-    color:white;
-    padding:14px 18px;
-    border-radius:14px;
-    font-weight:bold;
+border:0;
+background:#e83b61;
+color:white;
+padding:14px 18px;
+border-radius:14px;
+font-weight:bold;
 }
 
-/* FORMULARIOS */
-
 .form-grupo{
-    margin:14px 0;
-    text-align:left;
+margin:14px 0;
+text-align:left;
 }
 
 .form-grupo label{
-    display:block;
-    margin-bottom:7px;
-    color:#ddd;
-    font-size:14px;
+display:block;
+margin-bottom:7px;
+color:#ddd;
+font-size:14px;
 }
 
 .form-grupo input,
 .form-grupo select{
-    width:100%;
-    padding:14px;
-    border-radius:12px;
-    border:1px solid #4a3b52;
-    background:#120e16;
-    color:white;
-    outline:none;
+width:100%;
+padding:14px;
+border-radius:12px;
+border:1px solid #4a3b52;
+background:#120e16;
+color:white;
+outline:none;
 }
 
 .form-grupo input:focus,
 .form-grupo select:focus{
-    border-color:#ffd84d;
+border-color:#ffd84d;
+}
+
+/* QUINIELAS */
+
+.titulo-quinielas{
+font-size:17px;
+font-weight:bold;
+margin:20px 0 12px;
+text-align:left;
+}
+
+.acciones-quinielas{
+display:flex;
+gap:8px;
+margin-bottom:12px;
+}
+
+.acciones-quinielas button{
+padding:9px 12px;
+border-radius:10px;
+border:1px solid #51415a;
+background:#211a29;
+color:white;
+font-size:13px;
+}
+
+.lista-quinielas{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:9px;
+}
+
+.quiniela{
+display:flex;
+align-items:center;
+gap:10px;
+padding:13px 10px;
+border-radius:13px;
+background:#151018;
+border:1px solid #302538;
+cursor:pointer;
+transition:.2s;
+}
+
+.quiniela:hover{
+border-color:#ffd84d;
+}
+
+.quiniela input{
+width:19px;
+height:19px;
+accent-color:#ffd84d;
+}
+
+.quiniela.seleccionada{
+border-color:#ffd84d;
+background:#251d28;
+}
+
+.contador-seleccion{
+margin-top:12px;
+font-size:13px;
+color:#bbb;
+text-align:left;
 }
 
 /* RESULTADOS */
 
 .resultados{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
 }
 
 .resultado{
-    padding:16px;
-    border-radius:15px;
-    background:#17121c;
-    border:1px solid #302538;
-    text-align:left;
+padding:16px;
+border-radius:15px;
+background:#17121c;
+border:1px solid #302538;
+text-align:left;
 }
 
 .resultado .loteria{
-    color:#aaa;
-    font-size:13px;
+color:#aaa;
+font-size:13px;
 }
 
 .resultado .numero{
-    font-size:28px;
-    font-weight:900;
-    margin-top:4px;
+font-size:28px;
+font-weight:900;
+margin-top:4px;
 }
 
-.resultado .numero.hot{
-    color:#ff405f;
-}
-
-/* GENERADOR */
+.resultado .numero.hot{color:#ff405f}
 
 .generado{
-    text-align:center;
-    font-size:65px;
-    font-weight:900;
-    color:#ffd84d;
-    padding:15px;
+text-align:center;
+font-size:65px;
+font-weight:900;
+color:#ffd84d;
+padding:15px;
 }
-
-/* JUGADA */
 
 .resumen{
-    background:#120e16;
-    border-radius:15px;
-    padding:15px;
-    margin-top:15px;
-    text-align:left;
-    line-height:1.7;
+background:#120e16;
+border-radius:15px;
+padding:15px;
+margin-top:15px;
+text-align:left;
+line-height:1.7;
 }
-
-/* ADMIN */
 
 .admin{
-    border:1px solid #6b506f;
+border:1px solid #6b506f;
 }
 
-.admin h2{
-    color:#ffd84d;
-}
+.admin h2{color:#ffd84d}
 
 .admin-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
 }
 
 .admin-item{
-    background:#151018;
-    border:1px solid #34283b;
-    border-radius:14px;
-    padding:12px;
+background:#151018;
+border:1px solid #34283b;
+border-radius:14px;
+padding:12px;
 }
 
 .admin-item label{
-    display:block;
-    font-size:13px;
-    color:#bbb;
-    margin-bottom:5px;
+display:block;
+font-size:13px;
+color:#bbb;
+margin-bottom:5px;
 }
 
 .admin-item input{
-    width:100%;
-    background:#09070b;
-    border:1px solid #413346;
-    color:white;
-    padding:10px;
-    border-radius:9px;
+width:100%;
+background:#09070b;
+border:1px solid #413346;
+color:white;
+padding:10px;
+border-radius:9px;
 }
 
 .admin-botones{
-    display:flex;
-    gap:10px;
-    margin-top:15px;
-    flex-wrap:wrap;
+display:flex;
+gap:10px;
+margin-top:15px;
+flex-wrap:wrap;
 }
-
-/* MENSAJES */
 
 .mensaje{
-    display:none;
-    padding:14px;
-    border-radius:12px;
-    margin-top:12px;
-    background:#17351f;
-    color:#9affb4;
+display:none;
+padding:14px;
+border-radius:12px;
+margin-top:12px;
+background:#17351f;
+color:#9affb4;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
-    position:fixed;
-    right:18px;
-    bottom:18px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25d366;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:29px;
-    text-decoration:none;
-    box-shadow:0 8px 25px rgba(0,0,0,.4);
-    z-index:100;
+position:fixed;
+right:18px;
+bottom:18px;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#25d366;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:29px;
+text-decoration:none;
+box-shadow:0 8px 25px rgba(0,0,0,.4);
+z-index:100;
 }
-
-/* FOOTER */
 
 footer{
-    text-align:center;
-    padding:35px 15px 100px;
-    color:#999;
-    font-size:13px;
+text-align:center;
+padding:35px 15px 100px;
+color:#999;
+font-size:13px;
 }
 
-/* OCULTAR */
-
-.oculto{
-    display:none;
-}
-
-/* RESPONSIVE */
+.oculto{display:none}
 
 @media(max-width:600px){
 
-    .logo{
-        font-size:34px;
-    }
+.logo{font-size:34px}
 
-    .resultados{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .admin-grid{
-        grid-template-columns:1fr;
-    }
-
-    .numero-caliente{
-        font-size:60px;
-    }
+.resultados{
+grid-template-columns:1fr 1fr;
 }
-</style>
-</head>
 
-<body>
+.admin-grid{
+grid-template-columns:1fr;
+}
 
-<header>
+.lista-quinielas{
+grid-template-columns:1fr;
+}
 
-<div class="corona">👑</div>
+.numero-caliente{
+font-size:60px;
+}
 
-<div class="logo">
+}
+</style></head><body><header><div class="corona">👑</div><div class="logo">
 LA REINA <span>832</span>
-</div>
-
-<div class="subtitulo">
+</div><div class="subtitulo">
 QUINIELA ONLINE
-</div>
-
-<div class="subtitulo">
+</div><div class="subtitulo">
 ✨ Tu agencia de confianza ✨
-</div>
-
-<div class="online">
+</div><div class="online">
 <span class="punto"></span>
 <span><b id="jugadores">32</b> jugadores en línea</span>
-</div>
-
-</header>
-
-
-<div class="container">
-
-<!-- MENU -->
-
-<nav class="menu">
-
-<button onclick="irA('inicio')">🏠 Inicio</button>
+</div></header><div class="container"><nav class="menu"><button onclick="irA('inicio')">🏠 Inicio</button>
 
 <button onclick="irA('jugada')">🎟️ Mi jugada</button>
 
@@ -423,346 +405,178 @@ QUINIELA ONLINE
 
 <button onclick="abrirAdmin()">🔐 Admin</button>
 
-</nav>
-
-
-<!-- INICIO -->
-
-<section id="inicio">
-
-<div class="card destacado">
-
-<h2>🔥 NÚMERO CALIENTE</h2>
-
-<div class="numero-caliente" id="numeroCaliente">
-832
-</div>
-
-<p>
-El número elegido por La Reina 👑
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h2>🎟️ ¿LISTA PARA JUGAR?</h2>
-
-<p>
-Cargá tu jugada de manera rápida y sencilla.
-</p>
-
-<button class="boton-principal" onclick="irA('jugada')">
+</nav><!-- INICIO --><section id="inicio"><div class="card destacado"><h2>🔥 NÚMERO CALIENTE</h2><div class="numero-caliente" id="numeroCaliente">
+0832
+</div><p>El número elegido por La Reina 👑</p></div><div class="card"><h2>🎟️ ¿LISTA PARA JUGAR?</h2><p>Cargá tu jugada de manera rápida y sencilla.</p><button class="boton-principal" onclick="irA('jugada')">
 🎟️ CARGAR MI JUGADA
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h2>📋 ÚLTIMOS RESULTADOS</h2>
-
-<div class="resultados" id="miniResultados"></div>
-
-<br>
-
-<button class="boton-secundario" onclick="irA('resultados')">
+</button></div><div class="card"><h2>📋 ÚLTIMOS RESULTADOS</h2><div class="resultados" id="miniResultados"></div><br><button class="boton-secundario" onclick="irA('resultados')">
 VER TODOS LOS RESULTADOS
-</button>
-
-</div>
-
-</section>
-
-
-<!-- JUGADA -->
-
-<section id="jugada" class="oculto">
-
-<div class="card">
-
-<h2>🎟️ CARGAR MI JUGADA</h2>
-
-<div class="form-grupo">
-
-<label>Elegí la lotería</label>
-
-<select id="loteria">
-<option>Ciudad</option>
-<option>Provincia</option>
-<option>Córdoba</option>
-<option>Santa Fe</option>
-<option>Entre Ríos</option>
-<option>Corrientes</option>
-<option>Mendoza</option>
-<option>Chaco</option>
-<option>Montevideo</option>
-</select>
-
-</div>
-
-
-<div class="form-grupo">
-
-<label>Número</label>
+</button></div></section><!-- JUGADA --><section id="jugada" class="oculto"><div class="card"><h2>🎟️ CARGAR MI JUGADA</h2><div class="titulo-quinielas">
+📍 ELEGÍ UNA O VARIAS QUINIELAS
+</div><div class="acciones-quinielas"><button onclick="seleccionarTodas()">
+SELECCIONAR TODAS
+</button><button onclick="deseleccionarTodas()">
+LIMPIAR
+</button></div><div class="lista-quinielas" id="listaQuinielas"></div><div class="contador-seleccion">
+Quinielas seleccionadas:
+<b id="cantidadQuinielas">0</b>
+</div><div class="form-grupo"><label>Número</label>
 
 <input
 id="numeroJugada"
 type="text"
 inputmode="numeric"
 maxlength="4"
-placeholder="Ej: 832"
->
+placeholder="Ej: 0832"
 
-</div>
+«»
 
+</div><div class="form-grupo"><label>Modalidad</label>
 
-<div class="form-grupo">
-
-<label>Modalidad</label>
-
-<select id="modalidad">
-<option>Primera</option>
+<select id="modalidad"><option>Primera</option>
 <option>Matutina</option>
 <option>Vespertina</option>
 <option>Nocturna</option>
-<option>Previa</option>
-</select>
-
-</div>
-
-
-<div class="form-grupo">
-
-<label>Monto</label>
+<option>Previa</option></select></div><div class="form-grupo"><label>Monto</label>
 
 <input
 id="monto"
 type="number"
 min="0"
 placeholder="Ej: 1000"
->
 
-</div>
+«»
 
-
-<button class="boton-principal" onclick="crearJugada()">
+</div><button class="boton-principal" onclick="crearJugada()">
 CONFIRMAR JUGADA
-</button>
-
-<div id="mensajeJugada" class="mensaje">
+</button><div id="mensajeJugada" class="mensaje">
 Jugada preparada correctamente.
-</div>
+</div><div id="resumenJugada" class="resumen oculto"></div><div id="botonWhatsJugada" class="oculto" style="margin-top:15px"><a
+id="enviarWhatsApp"
+class="boton-principal"
+style="display:block;text-decoration:none;text-align:center"
+target="_blank"
+rel="noopener noreferrer"
 
+«»
 
-<div id="resumenJugada" class="resumen oculto"></div>
+📲 ENVIAR JUGADA POR WHATSAPP
+</a>
 
-</div>
-
-</section>
-
-
-<!-- RESULTADOS -->
-
-<section id="resultados" class="oculto">
-
-<div class="card">
-
-<h2>📋 RESULTADOS</h2>
-
-<p>
-Resultados cargados por La Reina 832
-</p>
-
-<div class="resultados" id="todosResultados"></div>
-
-</div>
-
-</section>
-
-
-<!-- GENERADOR -->
-
-<section id="generador" class="oculto">
-
-<div class="card">
-
-<h2>🎰 GENERADOR DE NÚMEROS</h2>
-
-<p>
-Escribí una palabra y generaremos un número.
-</p>
-
-
-<div class="form-grupo">
-
-<label>Palabra</label>
+</div></div></section><!-- RESULTADOS --><section id="resultados" class="oculto"><div class="card"><h2>📋 RESULTADOS</h2><p>Resultados cargados por La Reina 832</p><div class="resultados" id="todosResultados"></div></div></section><!-- GENERADOR --><section id="generador" class="oculto"><div class="card"><h2>🎰 GENERADOR DE NÚMEROS</h2><p>Escribí una palabra y generaremos un número.</p><div class="form-grupo"><label>Palabra</label>
 
 <input
 id="palabra"
 type="text"
 placeholder="Ej: REINA"
->
 
-</div>
+«»
 
-
-<button class="boton-principal" onclick="generarNumero()">
+</div><button class="boton-principal" onclick="generarNumero()">
 🎰 GENERAR NÚMERO
-</button>
-
-
-<div class="generado" id="numeroGenerado">
+</button><div class="generado" id="numeroGenerado">
 0000
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ADMIN -->
-
-<section id="admin" class="oculto">
-
-<div class="card admin">
-
-<h2>🔐 PANEL DE ADMINISTRACIÓN</h2>
-
-<p>
+</div></div></section><!-- ADMIN --><section id="admin" class="oculto"><div class="card admin"><h2>🔐 PANEL DE ADMINISTRACIÓN</h2><p>
 Desde acá podés actualizar el número caliente y los resultados.
-</p>
-
-
-<div class="form-grupo">
-
-<label>Número caliente</label>
+</p><div class="form-grupo"><label>Número caliente</label>
 
 <input
 id="adminCaliente"
 type="text"
 maxlength="4"
 inputmode="numeric"
->
 
-</div>
+«»
 
-
-<h3>📋 RESULTADOS</h3>
-
-<div class="admin-grid" id="adminResultados"></div>
-
-
-<div class="admin-botones">
-
-<button class="boton-principal" onclick="guardarAdmin()">
+</div><h3>📋 RESULTADOS</h3><div class="admin-grid" id="adminResultados"></div><div class="admin-botones"><button class="boton-principal" onclick="guardarAdmin()">
 💾 GUARDAR CAMBIOS
-</button>
-
-<button class="boton-rojo" onclick="cerrarAdmin()">
+</button><button class="boton-rojo" onclick="cerrarAdmin()">
 CERRAR
-</button>
-
-</div>
-
-
-<div id="mensajeAdmin" class="mensaje">
+</button></div><div id="mensajeAdmin" class="mensaje">
 Cambios guardados correctamente.
-</div>
-
-</div>
-
-</section>
-
-</div>
-
-
-<!-- WHATSAPP -->
-
-<a
+</div></div></section></div><!-- WHATSAPP --><a
 class="whatsapp"
-href="https://wa.me/"
+href="https://wa.me/543517682897"
 target="_blank"
+rel="noopener noreferrer"
 title="WhatsApp"
->
+
+«»
+
 💬
 </a>
 
-
-<footer>
-
-👑 LA REINA 832<br>
+<footer>👑 LA REINA 832<br>
 QUINIELA ONLINE<br><br>
 Tu agencia de confianza ✨
 
-</footer>
-
-
-<script>
+</footer><script>
 
 /* =========================
-   DATOS INICIALES
+   QUINIELAS
 ========================= */
 
-const resultadosIniciales = [
+const quinielas = [
 
-{
-    nombre:"Ciudad",
-    numero:"0000"
-},
-
-{
-    nombre:"Provincia",
-    numero:"0000"
-},
-
-{
-    nombre:"Córdoba",
-    numero:"0000"
-},
-
-{
-    nombre:"Santa Fe",
-    numero:"0000"
-},
-
-{
-    nombre:"Entre Ríos",
-    numero:"0000"
-},
-
-{
-    nombre:"Corrientes",
-    numero:"0000"
-},
-
-{
-    nombre:"Mendoza",
-    numero:"0000"
-},
-
-{
-    nombre:"Chaco",
-    numero:"0000"
-},
-
-{
-    nombre:"Montevideo",
-    numero:"0000"
-}
+"NACIONAL",
+"PROVINCIA",
+"SANTA FE",
+"CÓRDOBA",
+"ENTRE RÍOS",
+"MENDOZA",
+"CORRIENTES",
+"CHACO",
+"CATAMARCA",
+"CHUBUT",
+"FORMOSA",
+"JUJUY",
+"LA RIOJA",
+"MISIONES",
+"PARAGUAY",
+"RÍO NEGRO",
+"SAN LUIS",
+"SANTIAGO",
+"TUCUMÁN",
+"MONTEVIDEO",
+"URUGUAY"
 
 ];
 
 
 /* =========================
-   CARGAR DATOS
+   RESULTADOS
 ========================= */
+
+const resultadosIniciales = [
+
+{nombre:"Nacional",numero:"0000"},
+{nombre:"Provincia",numero:"0000"},
+{nombre:"Santa Fe",numero:"0000"},
+{nombre:"Córdoba",numero:"0000"},
+{nombre:"Entre Ríos",numero:"0000"},
+{nombre:"Mendoza",numero:"0000"},
+{nombre:"Corrientes",numero:"0000"},
+{nombre:"Chaco",numero:"0000"},
+{nombre:"Catamarca",numero:"0000"},
+{nombre:"Chubut",numero:"0000"},
+{nombre:"Formosa",numero:"0000"},
+{nombre:"Jujuy",numero:"0000"},
+{nombre:"La Rioja",numero:"0000"},
+{nombre:"Misiones",numero:"0000"},
+{nombre:"Paraguay",numero:"0000"},
+{nombre:"Río Negro",numero:"0000"},
+{nombre:"San Luis",numero:"0000"},
+{nombre:"Santiago",numero:"0000"},
+{nombre:"Tucumán",numero:"0000"},
+{nombre:"Montevideo",numero:"0000"},
+{nombre:"Uruguay",numero:"0000"}
+
+];
+
 
 let numeroCaliente =
 localStorage.getItem("reina_numero_caliente")
-|| "832";
+|| "0832";
 
 
 let resultadosGuardados =
@@ -776,11 +590,113 @@ resultadosGuardados
 
 
 /* =========================
-   MOSTRAR NÚMERO CALIENTE
+   NÚMERO CALIENTE
 ========================= */
 
 document.getElementById("numeroCaliente").textContent =
 numeroCaliente;
+
+
+/* =========================
+   LISTA DE QUINIELAS
+========================= */
+
+function cargarQuinielas(){
+
+const contenedor =
+document.getElementById("listaQuinielas");
+
+contenedor.innerHTML="";
+
+quinielas.forEach(function(nombre,index){
+
+const label =
+document.createElement("label");
+
+label.className="quiniela";
+
+label.innerHTML=`
+
+<input
+type="checkbox"
+value="${nombre}"
+onchange="actualizarSeleccion()"
+>
+
+<span>${nombre}</span>
+
+`;
+
+contenedor.appendChild(label);
+
+});
+
+actualizarSeleccion();
+
+}
+
+
+function actualizarSeleccion(){
+
+const checks =
+document.querySelectorAll(
+"#listaQuinielas input[type='checkbox']"
+);
+
+let cantidad=0;
+
+checks.forEach(function(check){
+
+const padre=check.parentElement;
+
+if(check.checked){
+
+cantidad++;
+
+padre.classList.add("seleccionada");
+
+}else{
+
+padre.classList.remove("seleccionada");
+
+}
+
+});
+
+document.getElementById("cantidadQuinielas")
+.textContent=cantidad;
+
+}
+
+
+function seleccionarTodas(){
+
+document.querySelectorAll(
+"#listaQuinielas input[type='checkbox']"
+).forEach(function(check){
+
+check.checked=true;
+
+});
+
+actualizarSeleccion();
+
+}
+
+
+function deseleccionarTodas(){
+
+document.querySelectorAll(
+"#listaQuinielas input[type='checkbox']"
+).forEach(function(check){
+
+check.checked=false;
+
+});
+
+actualizarSeleccion();
+
+}
 
 
 /* =========================
@@ -789,37 +705,32 @@ numeroCaliente;
 
 function irA(seccion){
 
-    const secciones = [
-        "inicio",
-        "jugada",
-        "resultados",
-        "generador",
-        "admin"
-    ];
+const secciones=[
+"inicio",
+"jugada",
+"resultados",
+"generador",
+"admin"
+];
 
-    secciones.forEach(function(id){
+secciones.forEach(function(id){
 
-        document
-        .getElementById(id)
-        .classList.add("oculto");
+document.getElementById(id)
+.classList.add("oculto");
 
-    });
+});
 
+document.getElementById(seccion)
+.classList.remove("oculto");
 
-    document
-    .getElementById(seccion)
-    .classList.remove("oculto");
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-
-    if(seccion === "resultados"){
-        mostrarResultados();
-    }
+if(seccion==="resultados"){
+mostrarResultados();
+}
 
 }
 
@@ -830,78 +741,70 @@ function irA(seccion){
 
 function mostrarResultados(){
 
-    const contenedor =
-    document.getElementById("todosResultados");
+const contenedor=
+document.getElementById("todosResultados");
 
+contenedor.innerHTML="";
 
-    contenedor.innerHTML = "";
+resultados.forEach(function(resultado){
 
+const div=
+document.createElement("div");
 
-    resultados.forEach(function(resultado){
+div.className="resultado";
 
-        const div =
-        document.createElement("div");
+let esCaliente=
+resultado.numero===numeroCaliente;
 
-        div.className = "resultado";
+div.innerHTML=`
 
+<div class="loteria">
+${resultado.nombre}
+</div>
 
-        let esCaliente =
-        resultado.numero === numeroCaliente;
+<div class="numero ${esCaliente ? "hot":""}">
+${resultado.numero}
+</div>
 
+`;
 
-        div.innerHTML = `
+contenedor.appendChild(div);
 
-        <div class="loteria">
-        ${resultado.nombre}
-        </div>
-
-        <div class="numero ${esCaliente ? "hot" : ""}">
-        ${resultado.numero}
-        </div>
-
-        `;
-
-
-        contenedor.appendChild(div);
-
-    });
+});
 
 }
 
 
 function mostrarMiniResultados(){
 
-    const contenedor =
-    document.getElementById("miniResultados");
+const contenedor=
+document.getElementById("miniResultados");
 
+contenedor.innerHTML="";
 
-    contenedor.innerHTML = "";
+resultados.slice(0,6)
+.forEach(function(resultado){
 
+const div=
+document.createElement("div");
 
-    resultados.slice(0,6).forEach(function(resultado){
+div.className="resultado";
 
-        const div =
-        document.createElement("div");
+div.innerHTML=`
 
-        div.className = "resultado";
+<div class="loteria">
+${resultado.nombre}
+</div>
 
+<div class="numero">
+${resultado.numero}
+</div>
 
-        div.innerHTML = `
+`;
 
-        <div class="loteria">
-        ${resultado.nombre}
-        </div>
+contenedor.appendChild(div);
 
-        <div class="numero">
-        ${resultado.numero}
-        </div>
-
-        `;
-
-
-        contenedor.appendChild(div);
-
-    });
+});
 
 }
 
@@ -912,66 +815,120 @@ function mostrarMiniResultados(){
 
 function crearJugada(){
 
-    const loteria =
-    document.getElementById("loteria").value;
+const seleccionadas=[];
 
-    const numero =
-    document.getElementById("numeroJugada").value.trim();
+document.querySelectorAll(
+"#listaQuinielas input[type='checkbox']:checked"
+).forEach(function(check){
 
-    const modalidad =
-    document.getElementById("modalidad").value;
+seleccionadas.push(check.value);
 
-    const monto =
-    document.getElementById("monto").value;
+});
 
 
-    if(numero === ""){
+if(seleccionadas.length===0){
 
-        alert("Ingresá un número.");
+alert("Seleccioná al menos una quiniela.");
 
-        return;
+return;
 
-    }
-
-
-    if(!/^[0-9]{1,4}$/.test(numero)){
-
-        alert("El número debe contener solamente números.");
-
-        return;
-
-    }
+}
 
 
-    let numeroFinal =
-    numero.padStart(4,"0");
+const numero=
+document.getElementById("numeroJugada")
+.value.trim();
 
 
-    const resumen =
-    document.getElementById("resumenJugada");
+const modalidad=
+document.getElementById("modalidad")
+.value;
 
 
-    resumen.innerHTML = `
-
-    <b>🎟️ RESUMEN DE JUGADA</b><br><br>
-
-    Lotería: <b>${loteria}</b><br>
-
-    Número: <b>${numeroFinal}</b><br>
-
-    Modalidad: <b>${modalidad}</b><br>
-
-    Monto: <b>$${monto || "0"}</b>
-
-    `;
+const monto=
+document.getElementById("monto")
+.value;
 
 
-    resumen.classList.remove("oculto");
+if(numero===""){
+
+alert("Ingresá un número.");
+
+return;
+
+}
 
 
-    document
-    .getElementById("mensajeJugada")
-    .style.display = "block";
+if(!/^[0-9]{1,4}$/.test(numero)){
+
+alert("El número debe contener solamente números.");
+
+return;
+
+}
+
+
+const numeroFinal=
+numero.padStart(4,"0");
+
+
+const resumen=
+document.getElementById("resumenJugada");
+
+
+resumen.innerHTML=`
+
+<b>🎟️ RESUMEN DE JUGADA</b><br><br>
+
+<b>Quinielas:</b><br>
+${seleccionadas.join(" • ")}
+<br><br>
+
+<b>Número:</b> ${numeroFinal}<br>
+
+<b>Modalidad:</b> ${modalidad}<br>
+
+<b>Monto:</b> $${monto || "0"}
+
+`;
+
+
+resumen.classList.remove("oculto");
+
+
+document.getElementById("mensajeJugada")
+.style.display="block";
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+const texto=
+
+"👑 LA REINA 832%0A%0A"+
+"🎟️ NUEVA JUGADA%0A%0A"+
+"Quinielas: "+encodeURIComponent(
+seleccionadas.join(", ")
+)+"%0A"+
+"Número: "+numeroFinal+"%0A"+
+"Modalidad: "+encodeURIComponent(modalidad)+"%0A"+
+"Monto: $"+encodeURIComponent(monto || "0");
+
+
+const enlace=
+"https://wa.me/543517682897?text="+texto;
+
+
+const boton=
+document.getElementById("enviarWhatsApp");
+
+
+boton.href=enlace;
+
+
+document.getElementById("botonWhatsJugada")
+.classList.remove("oculto");
 
 }
 
@@ -982,45 +939,40 @@ function crearJugada(){
 
 function generarNumero(){
 
-    const palabra =
-    document.getElementById("palabra")
-    .value
-    .trim()
-    .toUpperCase();
+const palabra=
+document.getElementById("palabra")
+.value
+.trim()
+.toUpperCase();
 
 
-    if(palabra === ""){
+if(palabra===""){
 
-        alert("Escribí una palabra.");
+alert("Escribí una palabra.");
 
-        return;
+return;
 
-    }
-
-
-    let total = 0;
+}
 
 
-    for(let i=0;i<palabra.length;i++){
-
-        total +=
-        palabra.charCodeAt(i) * (i+1);
-
-    }
+let total=0;
 
 
-    let numero =
-    total % 10000;
+for(let i=0;i<palabra.length;i++){
+
+total+=
+palabra.charCodeAt(i)*(i+1);
+
+}
 
 
-    let numeroTexto =
-    String(numero).padStart(4,"0");
+let numero=
+total%10000;
 
 
-    document
-    .getElementById("numeroGenerado")
-    .textContent =
-    numeroTexto;
+document.getElementById("numeroGenerado")
+.textContent=
+String(numero).padStart(4,"0");
 
 }
 
@@ -1031,144 +983,126 @@ function generarNumero(){
 
 function abrirAdmin(){
 
-    const clave =
-    prompt("Ingresá la clave de administrador:");
-
-    
-    if(clave !== "832admin"){
-
-        alert("Clave incorrecta.");
-
-        return;
-
-    }
+const clave=
+prompt("Ingresá la clave de administrador:");
 
 
-    irA("admin");
+if(clave!=="832admin"){
 
-    cargarAdmin();
+alert("Clave incorrecta.");
+
+return;
+
+}
+
+irA("admin");
+
+cargarAdmin();
 
 }
 
 
 function cargarAdmin(){
 
-    document
-    .getElementById("adminCaliente")
-    .value =
-    numeroCaliente;
+document.getElementById("adminCaliente")
+.value=numeroCaliente;
 
 
-    const contenedor =
-    document.getElementById("adminResultados");
+const contenedor=
+document.getElementById("adminResultados");
+
+contenedor.innerHTML="";
 
 
-    contenedor.innerHTML = "";
+resultados.forEach(function(resultado,index){
 
+const div=
+document.createElement("div");
 
-    resultados.forEach(function(resultado,index){
+div.className="admin-item";
 
-        const div =
-        document.createElement("div");
+div.innerHTML=`
 
-        div.className =
-        "admin-item";
+<label>${resultado.nombre}</label>
 
+<input
+type="text"
+maxlength="4"
+inputmode="numeric"
+id="resultadoAdmin${index}"
+value="${resultado.numero}"
+>
 
-        div.innerHTML = `
+`;
 
-        <label>${resultado.nombre}</label>
+contenedor.appendChild(div);
 
-        <input
-        type="text"
-        maxlength="4"
-        inputmode="numeric"
-        id="resultadoAdmin${index}"
-        value="${resultado.numero}"
-        >
-
-        `;
-
-
-        contenedor.appendChild(div);
-
-    });
+});
 
 }
 
 
 function guardarAdmin(){
 
-    let nuevoCaliente =
-    document
-    .getElementById("adminCaliente")
-    .value
-    .trim();
+let nuevoCaliente=
+document.getElementById("adminCaliente")
+.value.trim();
 
 
-    if(!/^[0-9]{1,4}$/.test(nuevoCaliente)){
+if(!/^[0-9]{1,4}$/.test(nuevoCaliente)){
 
-        alert("El número caliente debe ser numérico.");
+alert("El número caliente debe ser numérico.");
 
-        return;
+return;
 
-    }
-
-
-    numeroCaliente =
-    nuevoCaliente.padStart(4,"0");
+}
 
 
-    localStorage.setItem(
-        "reina_numero_caliente",
-        numeroCaliente
-    );
+numeroCaliente=
+nuevoCaliente.padStart(4,"0");
 
 
-    resultados.forEach(function(resultado,index){
-
-        const input =
-        document.getElementById(
-            "resultadoAdmin"+index
-        );
+localStorage.setItem(
+"reina_numero_caliente",
+numeroCaliente
+);
 
 
-        let valor =
-        input.value.trim();
+resultados.forEach(function(resultado,index){
+
+const input=
+document.getElementById(
+"resultadoAdmin"+index
+);
+
+let valor=
+input.value.trim();
 
 
-        if(/^[0-9]{1,4}$/.test(valor)){
+if(/^[0-9]{1,4}$/.test(valor)){
 
-            resultado.numero =
-            valor.padStart(4,"0");
+resultado.numero=
+valor.padStart(4,"0");
 
-        }
+}
 
-    });
-
-
-    localStorage.setItem(
-        "reina_resultados",
-        JSON.stringify(resultados)
-    );
+});
 
 
-    document
-    .getElementById("numeroCaliente")
-    .textContent =
-    numeroCaliente;
+localStorage.setItem(
+"reina_resultados",
+JSON.stringify(resultados)
+);
 
 
-    mostrarMiniResultados();
+document.getElementById("numeroCaliente")
+.textContent=numeroCaliente;
 
 
-    document
-    .getElementById("mensajeAdmin")
-    .style.display =
-    "block";
+mostrarMiniResultados();
 
-
-    mostrarResultados();
+document.getElementById("mensajeAdmin")
+.style.display="block";
 
 }
 
@@ -1179,36 +1113,30 @@ function guardarAdmin(){
 
 function cerrarAdmin(){
 
-    irA("inicio");
+irA("inicio");
 
 }
 
 
 /* =========================
-   CONTADOR DE JUGADORES
+   JUGADORES ONLINE
 ========================= */
 
 function actualizarJugadores(){
 
-    const numero =
-    Math.floor(
-        Math.random()*61
-    ) + 20;
+const numero=
+Math.floor(Math.random()*61)+20;
 
-
-    document
-    .getElementById("jugadores")
-    .textContent =
-    numero;
+document.getElementById("jugadores")
+.textContent=numero;
 
 }
-
 
 actualizarJugadores();
 
 setInterval(
-    actualizarJugadores,
-    10000
+actualizarJugadores,
+10000
 );
 
 
@@ -1216,9 +1144,9 @@ setInterval(
    INICIO
 ========================= */
 
+cargarQuinielas();
+
 mostrarMiniResultados();
 
-</script>
-
-</body>
-  </html>
+</script></body>
+    </html>
