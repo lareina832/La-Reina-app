@@ -6,21 +6,19 @@
 <title>LA REINA 832</title>
 
 <style>
-*{
- box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
  margin:0;
  font-family:Arial,sans-serif;
- background:linear-gradient(135deg,#12001f,#260044,#100018);
- color:#fff;
+ background:linear-gradient(135deg,#12001f,#320052);
+ color:white;
 }
 
 header{
  text-align:center;
- padding:20px 10px;
- background:#160025;
+ padding:22px 10px;
+ background:#170024;
  border-bottom:2px solid #d4af37;
 }
 
@@ -32,67 +30,18 @@ header{
 
 .sub{
  margin-top:5px;
- color:#e5c76b;
-}
-
-.online{
- margin-top:8px;
- color:#63ff8a;
- font-weight:bold;
-}
-
-nav{
- display:flex;
- flex-wrap:wrap;
- justify-content:center;
- gap:7px;
- padding:12px;
- background:#1c0030;
- position:sticky;
- top:0;
- z-index:10;
-}
-
-nav button,
-.btn{
- border:0;
- border-radius:12px;
- padding:12px 15px;
- font-weight:bold;
- cursor:pointer;
-}
-
-nav button{
- background:#35105a;
- color:#fff;
-}
-
-.btn{
- background:#d4af37;
- color:#17001f;
-}
-
-.btn:hover{
- opacity:.9;
+ color:#e7cb72;
 }
 
 main{
- max-width:900px;
+ max-width:650px;
  margin:auto;
  padding:15px;
 }
 
-.section{
- display:none;
-}
-
-.section.active{
- display:block;
-}
-
 .card{
- background:rgba(255,255,255,.08);
- border:1px solid rgba(212,175,55,.35);
+ background:#210335;
+ border:1px solid #754b8c;
  border-radius:18px;
  padding:18px;
  margin-bottom:18px;
@@ -102,200 +51,99 @@ h1,h2,h3{
  color:#ffd84d;
 }
 
-input,
-select{
- width:100%;
- padding:13px;
- margin:6px 0 12px;
- border:0;
- border-radius:10px;
- font-size:16px;
+label{
+ display:block;
+ margin-top:12px;
+ margin-bottom:5px;
+ font-weight:bold;
 }
 
-.jugada-card{
- background:rgba(0,0,0,.25);
- border:1px solid #71428f;
- border-radius:16px;
- padding:15px;
- margin:15px 0;
+input{
+ width:100%;
+ padding:14px;
+ border:0;
+ border-radius:10px;
+ font-size:18px;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:8px;
+}
+
+.btnop{
+ background:#391052;
+ color:white;
+ border:1px solid #80539b;
+ border-radius:10px;
+ padding:13px 5px;
+ font-weight:bold;
+ text-align:center;
+ cursor:pointer;
+}
+
+.btnop.activo{
+ background:#d4af37;
+ color:#180020;
 }
 
 .numero{
- font-size:22px;
- font-weight:bold;
-}
-
-.opciones{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:8px;
-}
-
-.opcion{
- background:#32104f;
- border:1px solid #754a91;
- color:white;
- padding:12px 8px;
- border-radius:10px;
+ font-size:25px;
  text-align:center;
- cursor:pointer;
- font-weight:bold;
 }
 
-.opcion.seleccionada{
- background:#d4af37;
- color:#17001f;
- border-color:#ffd84d;
+.jugada{
+ background:#15001f;
+ border:1px solid #5d3473;
+ border-radius:15px;
+ padding:15px;
+ margin-top:15px;
 }
 
-.sorteos{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:8px;
+.oculto{
+ display:none;
 }
 
-.sorteo{
- background:#32104f;
- border:1px solid #754a91;
- color:white;
- padding:13px 5px;
- border-radius:10px;
- text-align:center;
- cursor:pointer;
- font-weight:bold;
-}
-
-.sorteo.seleccionado{
- background:#d4af37;
- color:#17001f;
-}
-
-.premios{
- display:flex;
- gap:8px;
-}
-
-.premio{
- flex:1;
- background:#32104f;
- border:1px solid #754a91;
- color:white;
- padding:12px;
- border-radius:10px;
- text-align:center;
- cursor:pointer;
- font-weight:bold;
-}
-
-.premio.seleccionado{
- background:#d4af37;
- color:#17001f;
-}
-
-.quinielas{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:7px;
-}
-
-.quiniela{
- background:#32104f;
- border:1px solid #754a91;
- padding:10px 5px;
- border-radius:9px;
- text-align:center;
- cursor:pointer;
- font-size:13px;
-}
-
-.quiniela.seleccionada{
- background:#d4af37;
- color:#17001f;
- font-weight:bold;
-}
-
-.montoRapido{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:7px;
-}
-
-.montoBtn{
- background:#32104f;
- border:1px solid #754a91;
- color:white;
- padding:11px 5px;
- border-radius:9px;
- text-align:center;
- cursor:pointer;
- font-weight:bold;
-}
-
-.montoBtn.seleccionado{
- background:#d4af37;
- color:#17001f;
+.monto{
+ margin-top:10px;
 }
 
 .acciones{
  display:flex;
  flex-wrap:wrap;
  gap:8px;
- margin-top:12px;
+ margin-top:15px;
 }
 
-.btn-sec{
- background:#4b1d66;
- color:white;
+button{
  border:0;
- border-radius:10px;
- padding:10px 13px;
+ border-radius:12px;
+ padding:13px 15px;
+ font-weight:bold;
  cursor:pointer;
 }
 
-.redoblona{
- display:none;
- background:rgba(212,175,55,.08);
- border:1px solid #8b7021;
- border-radius:12px;
- padding:12px;
- margin-top:10px;
+.principal{
+ background:#d4af37;
+ color:#16001f;
 }
 
-.redoblona.visible{
- display:block;
+.secundario{
+ background:#54206f;
+ color:white;
 }
 
-.resumen{
- background:#08000d;
+.comprobante{
+ background:#050008;
  border:1px solid #d4af37;
- border-radius:15px;
+ border-radius:12px;
  padding:15px;
  white-space:pre-wrap;
  font-family:monospace;
  font-size:14px;
  line-height:1.5;
  overflow:auto;
-}
-
-.hot{
- font-size:48px;
- text-align:center;
- color:#ffcf40;
- font-weight:bold;
-}
-
-.resultado{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:8px;
-}
-
-.resultado strong{
- background:#fff;
- color:#111;
- padding:10px;
- border-radius:8px;
- text-align:center;
 }
 
 .whatsapp{
@@ -306,46 +154,18 @@ select{
  height:58px;
  border-radius:50%;
  background:#25d366;
+ color:white;
  display:flex;
  align-items:center;
  justify-content:center;
- color:white;
- font-size:28px;
  text-decoration:none;
- z-index:20;
+ font-size:28px;
 }
 
-hr{
- border:0;
- border-top:1px solid rgba(255,255,255,.15);
- margin:20px 0;
-}
-
-.small{
- opacity:.75;
- font-size:13px;
-}
-
-@media(max-width:600px){
-
- nav button{
-  font-size:12px;
-  padding:10px 8px;
- }
-
- .opciones,
- .sorteos{
+@media(max-width:500px){
+ .grid{
   grid-template-columns:1fr 1fr;
  }
-
- .montoRapido{
-  grid-template-columns:repeat(2,1fr);
- }
-
- .resultado{
-  grid-template-columns:repeat(2,1fr);
- }
-
 }
 </style>
 </head>
@@ -353,83 +173,11 @@ hr{
 <body>
 
 <header>
-
-<div class="logo">👑 LA REINA 832</div>
-
-<div class="sub">QUINIELA ONLINE</div>
-
-<div class="online">
-🟢 Jugadores en línea:
-<span id="online">32</span>
-</div>
-
+ <div class="logo">👑 LA REINA 832</div>
+ <div class="sub">QUINIELA ONLINE</div>
 </header>
 
-
-<nav>
-
-<button onclick="mostrarSeccion('inicio')">
-🏠 INICIO
-</button>
-
-<button onclick="mostrarSeccion('jugada')">
-🎟️ CARGAR JUGADA
-</button>
-
-<button onclick="mostrarSeccion('resultados')">
-📊 RESULTADOS
-</button>
-
-<button onclick="mostrarSeccion('generador')">
-🎰 GENERADOR
-</button>
-
-<button onclick="mostrarSeccion('admin')">
-👑 ADMIN
-</button>
-
-</nav>
-
-
 <main>
-
-
-<!-- INICIO -->
-
-<section id="inicio" class="section active">
-
-<div class="card">
-
-<h1>👑 BIENVENIDOS A LA REINA 832</h1>
-
-<p>
-Jugá fácil, rápido y seguro.
-</p>
-
-<button class="btn" onclick="mostrarSeccion('jugada')">
-🎟️ CARGAR MI JUGADA
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h2>🔥 NÚMERO CALIENTE</h2>
-
-<div class="hot" id="numeroCaliente">
-832
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- CARGAR JUGADA -->
-
-<section id="jugada" class="section">
 
 <div class="card">
 
@@ -437,43 +185,26 @@ Jugá fácil, rápido y seguro.
 
 <h3>1️⃣ ELEGÍ EL SORTEO</h3>
 
-<div class="sorteos">
+<div class="grid" id="sorteos">
 
-<div class="sorteo" onclick="elegirSorteo(this,'PREVIA')">
-PREVIA
-</div>
-
-<div class="sorteo" onclick="elegirSorteo(this,'PRIMERA')">
-PRIMERA
-</div>
-
-<div class="sorteo" onclick="elegirSorteo(this,'MATUTINA')">
-MATUTINA
-</div>
-
-<div class="sorteo" onclick="elegirSorteo(this,'VESPERTINA')">
-VESPERTINA
-</div>
-
-<div class="sorteo" onclick="elegirSorteo(this,'NOCTURNA')">
-NOCTURNA
-</div>
+<div class="btnop" onclick="sorteo(this,'PREVIA')">PREVIA</div>
+<div class="btnop" onclick="sorteo(this,'PRIMERA')">PRIMERA</div>
+<div class="btnop" onclick="sorteo(this,'MATUTINA')">MATUTINA</div>
+<div class="btnop" onclick="sorteo(this,'VESPERTINA')">VESPERTINA</div>
+<div class="btnop" onclick="sorteo(this,'NOCTURNA')">NOCTURNA</div>
 
 </div>
 
-<div id="listaJugadas"></div>
-
+<div id="jugadas"></div>
 
 <div class="acciones">
-
-<button class="btn" onclick="agregarJugada()">
-➕ AGREGAR OTRO NÚMERO
+<button class="principal" onclick="agregar()">
+➕ AGREGAR NÚMERO
 </button>
 
-<button class="btn" onclick="generarComprobante()">
-👀 VER COMPROBANTE
+<button class="principal" onclick="comprobante()">
+🧾 VER COMPROBANTE
 </button>
-
 </div>
 
 </div>
@@ -481,137 +212,38 @@ NOCTURNA
 
 <div class="card">
 
-<h2>📋 COMPROBANTE</h2>
+<h2>🧾 COMPROBANTE</h2>
 
-<div id="comprobante" class="resumen">
-Todavía no hay una jugada cargada.
+<div id="ticket" class="comprobante">
+Cargá tu jugada para ver el comprobante.
 </div>
 
 <br>
 
-<button class="btn" onclick="enviarWhatsApp()">
+<button class="principal" onclick="enviar()">
 📲 ENVIAR POR WHATSAPP
 </button>
 
 </div>
 
-</section>
-
-
-
-<!-- RESULTADOS -->
-
-<section id="resultados" class="section">
-
-<div class="card">
-
-<h1>📊 RESULTADOS</h1>
-
-<div id="listaResultados"></div>
-
-</div>
-
-</section>
-
-
-
-<!-- GENERADOR -->
-
-<section id="generador" class="section">
-
-<div class="card">
-
-<h1>🎰 GENERADOR</h1>
-
-<label>Escribí una palabra:</label>
-
-<input id="palabra" placeholder="Ejemplo: REINA">
-
-<button class="btn" onclick="generarNumero()">
-GENERAR NÚMERO
-</button>
-
-<div class="hot" id="numeroGenerado">
-----
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ADMIN -->
-
-<section id="admin" class="section">
-
-<div class="card" id="loginAdmin">
-
-<h1>👑 ADMINISTRACIÓN</h1>
-
-<input
-id="claveAdmin"
-type="password"
-placeholder="Contraseña">
-
-<button class="btn" onclick="entrarAdmin()">
-INGRESAR
-</button>
-
-</div>
-
-
-<div
-class="card"
-id="panelAdmin"
-style="display:none">
-
-<h1>👑 PANEL ADMIN</h1>
-
-
-<h2>🔥 NÚMERO CALIENTE</h2>
-
-<input
-id="adminCaliente"
-type="number"
-placeholder="Número">
-
-<button class="btn" onclick="guardarCaliente()">
-GUARDAR NÚMERO CALIENTE
-</button>
-
-
-<hr>
-
-
-<h2>📊 RESULTADOS</h2>
-
-<div id="adminResultados"></div>
-
-<button class="btn" onclick="guardarResultados()">
-💾 GUARDAR RESULTADOS
-</button>
-
-</div>
-
-</section>
-
 </main>
 
 
-<a
-class="whatsapp"
+<a class="whatsapp"
 href="https://wa.me/543517682897"
 target="_blank">
 ☏
 </a>
 
 
-
 <script>
 
-const quinielas = [
+let sorteoElegido="";
+let cantidad=0;
+let ticketTexto="";
 
+
+const quinielas=[
 "NACIONAL",
 "PROVINCIA",
 "SANTA FE",
@@ -633,559 +265,317 @@ const quinielas = [
 "TUCUMÁN",
 "MONTEVIDEO",
 "URUGUAY"
-
 ];
 
 
-const sorteos = [
-"PREVIA",
-"PRIMERA",
-"MATUTINA",
-"VESPERTINA",
-"NOCTURNA"
-];
+function sorteo(btn,nombre){
 
+ document.querySelectorAll("#sorteos .btnop")
+ .forEach(x=>x.classList.remove("activo"));
 
-let contadorJugada = 0;
+ btn.classList.add("activo");
 
-let sorteoElegido = "";
-
-let comprobanteTexto = "";
-
-
-
-/* NAVEGACIÓN */
-
-function mostrarSeccion(id){
-
- document
- .querySelectorAll(".section")
- .forEach(function(seccion){
-
-  seccion.classList.remove("active");
-
- });
-
- const destino = document.getElementById(id);
-
- if(destino){
-
-  destino.classList.add("active");
-
- }
-
- window.scrollTo(0,0);
-
+ sorteoElegido=nombre;
 }
 
 
+function agregar(){
 
-/* SORTEO */
+ cantidad++;
 
-function elegirSorteo(element,nombre){
+ let html=`
 
- document
- .querySelectorAll(".sorteo")
- .forEach(function(item){
+ <div class="jugada" id="j${cantidad}">
 
-  item.classList.remove("seleccionado");
+ <h2>🎟️ JUGADA ${cantidad}</h2>
 
- });
+ <label>NÚMERO</label>
 
- element.classList.add("seleccionado");
-
- sorteoElegido = nombre;
-
-}
-
-
-
-/* CREAR JUGADA */
-
-function crearJugada(){
-
- contadorJugada++;
-
- const card = document.createElement("div");
-
- card.className = "jugada-card";
-
- card.dataset.id = contadorJugada;
-
-
- let html = "";
-
-
- html += "<h2>🎟️ JUGADA " + contadorJugada + "</h2>";
-
-
- html += "<label><b>NÚMERO</b></label>";
-
- html += `
  <input
  class="numero"
  type="text"
  inputmode="numeric"
  maxlength="4"
  placeholder="Ej: 32"
- oninput="soloNumeros(this)">
- `;
+ oninput="this.value=this.value.replace(/\\D/g,'')">
 
 
- html += "<h3>2️⃣ MODALIDAD</h3>";
+ <label>MODALIDAD</label>
 
+ <div class="grid">
 
- html += `
- <div class="opciones">
-
- <div
- class="opcion"
- onclick="elegirModalidad(this,'CABEZA')">
+ <div class="btnop"
+ onclick="modalidad(this,'cabeza')">
  👑 A LA CABEZA
  </div>
 
- <div
- class="opcion"
- onclick="elegirModalidad(this,'PREMIOS')">
+ <div class="btnop"
+ onclick="modalidad(this,'premios')">
  🏆 A LOS PREMIOS
  </div>
 
- <div
- class="opcion"
- onclick="elegirModalidad(this,'REDOBLONA')">
+ <div class="btnop"
+ onclick="modalidad(this,'redoblona')">
  🔥 REDOBLONA
  </div>
 
  </div>
- `;
 
 
- html += `
  <input
  type="hidden"
- class="modalidad"
- value="">
- `;
+ class="tipo">
 
 
- html += `
- <div
- class="premiosBox"
- style="display:none">
+ <div class="premios oculto">
 
- <h3>PREMIOS</h3>
+ <label>¿HASTA QUÉ PREMIO?</label>
 
- <div class="premios">
+ <div class="grid">
 
- <div
- class="premio"
- onclick="elegirPremio(this,5)">
+ <div class="btnop"
+ onclick="premio(this,5)">
  5
  </div>
 
- <div
- class="premio"
- onclick="elegirPremio(this,10)">
+ <div class="btnop"
+ onclick="premio(this,10)">
  10
  </div>
 
- <div
- class="premio"
- onclick="elegirPremio(this,20)">
+ <div class="btnop"
+ onclick="premio(this,20)">
  20
  </div>
 
  </div>
 
- <input
- type="hidden"
- class="premiosValor"
- value="">
+ <input type="hidden" class="hasta">
 
  </div>
- `;
 
 
- html += `
- <div class="redoblona">
-
- <h3>🔥 REDOBLONA</h3>
+ <div class="redoblona oculto">
 
  <label>SEGUNDO NÚMERO</label>
 
  <input
- class="segundoNumero"
+ class="segundo"
  type="text"
  inputmode="numeric"
  maxlength="4"
  placeholder="Ej: 15"
- oninput="soloNumeros(this)">
-
- <label>POSICIÓN DEL PRIMER NÚMERO</label>
-
- <select class="posicion1">
-
- <option value="1">1</option>
- <option value="5">5</option>
- <option value="10">10</option>
- <option value="20">20</option>
-
- </select>
+ oninput="this.value=this.value.replace(/\\D/g,'')">
 
 
- <label>POSICIÓN DEL SEGUNDO NÚMERO</label>
+ <label>POSICIÓN PRIMER NÚMERO</label>
 
- <select class="posicion2">
+ <div class="grid posiciones1">
 
- <option value="1">1</option>
- <option value="5">5</option>
- <option value="10">10</option>
- <option value="20">20</option>
+ <div class="btnop activo"
+ onclick="posicion(this,'p1','1')">
+ 01
+ </div>
 
- </select>
+ <div class="btnop"
+ onclick="posicion(this,'p1','5')">
+ 05
+ </div>
+
+ <div class="btnop"
+ onclick="posicion(this,'p1','10')">
+ 10
+ </div>
+
+ <div class="btnop"
+ onclick="posicion(this,'p1','20')">
+ 20
+ </div>
 
  </div>
- `;
 
 
- html += "<h3>3️⃣ QUINIELAS</h3>";
+ <label>POSICIÓN SEGUNDO NÚMERO</label>
 
+ <div class="grid posiciones2">
 
- html += '<div class="quinielas">';
+ <div class="btnop activo"
+ onclick="posicion(this,'p2','1')">
+ 01
+ </div>
 
+ <div class="btnop"
+ onclick="posicion(this,'p2','5')">
+ 05
+ </div>
 
- quinielas.forEach(function(nombre){
+ <div class="btnop"
+ onclick="posicion(this,'p2','10')">
+ 10
+ </div>
 
-  html += `
-  <div
-  class="quiniela"
-  onclick="toggleQuiniela(this)">
-  ${nombre}
-  </div>
-  `;
-
- });
-
-
- html += "</div>";
-
-
- html += `
- <div class="acciones">
-
- <button
- class="btn-sec"
- onclick="seleccionarTodas(this)">
- ✅ TODAS
- </button>
-
- <button
- class="btn-sec"
- onclick="limpiarQuinielas(this)">
- ❌ LIMPIAR
- </button>
-
- <button
- class="btn-sec"
- onclick="eliminarJugada(this)">
- 🗑️ ELIMINAR
- </button>
+ <div class="btnop"
+ onclick="posicion(this,'p2','20')">
+ 20
+ </div>
 
  </div>
- `;
+
+ <input type="hidden" class="p1" value="1">
+ <input type="hidden" class="p2" value="1">
+
+ </div>
 
 
- html += "<h3>4️⃣ MONTO</h3>";
+ <label>QUINIELAS</label>
 
+ <div class="grid">
 
- html += `
- <div class="montoRapido">
-
+ ${quinielas.map(q=>`
  <div
- class="montoBtn"
- onclick="elegirMonto(this,100)">
- $100
+ class="btnop quiniela"
+ onclick="this.classList.toggle('activo')">
+ ${q}
  </div>
-
- <div
- class="montoBtn"
- onclick="elegirMonto(this,200)">
- $200
- </div>
-
- <div
- class="montoBtn"
- onclick="elegirMonto(this,500)">
- $500
- </div>
-
- <div
- class="montoBtn"
- onclick="elegirMonto(this,1000)">
- $1000
- </div>
+ `).join("")}
 
  </div>
+
+
+ <label>MONTO</label>
 
  <input
  class="monto"
  type="number"
- placeholder="Otro monto">
+ placeholder="$ Monto">
+
+
+ <div class="acciones">
+
+ <button
+ class="secundario"
+ onclick="todas(this)">
+ ✅ TODAS
+ </button>
+
+ <button
+ class="secundario"
+ onclick="borrar(this)">
+ 🗑️ ELIMINAR
+ </button>
+
+ </div>
+
+ </div>
  `;
 
-
- card.innerHTML = html;
-
-
  document
- .getElementById("listaJugadas")
- .appendChild(card);
-
+ .getElementById("jugadas")
+ .insertAdjacentHTML("beforeend",html);
 }
 
 
+function modalidad(btn,tipo){
 
-function agregarJugada(){
+ let card=btn.closest(".jugada");
 
- crearJugada();
-
-}
-
-
-
-function soloNumeros(input){
-
- input.value =
- input.value.replace(/\D/g,"");
-
-}
-
-
-
-/* MODALIDAD */
-
-function elegirModalidad(element,tipo){
-
- const card =
- element.closest(".jugada-card");
-
-
- card
- .querySelectorAll(".opcion")
- .forEach(function(item){
-
-  item.classList.remove("seleccionada");
-
+ card.querySelectorAll(".grid .btnop")
+ .forEach(x=>{
+  if(
+   x.textContent.includes("CABEZA")||
+   x.textContent.includes("PREMIOS")||
+   x.textContent.includes("REDOBLONA")
+  ){
+   x.classList.remove("activo");
+  }
  });
 
+ btn.classList.add("activo");
 
- element.classList.add("seleccionada");
+ card.querySelector(".tipo").value=tipo;
 
+ card.querySelector(".premios")
+ .classList.toggle("oculto",tipo!=="premios");
 
- card.querySelector(".modalidad").value = tipo;
-
-
- const premios =
- card.querySelector(".premiosBox");
-
- const redoblona =
- card.querySelector(".redoblona");
-
-
- premios.style.display = "none";
-
- redoblona.classList.remove("visible");
-
-
- if(tipo === "PREMIOS"){
-
-  premios.style.display = "block";
-
- }
-
-
- if(tipo === "REDOBLONA"){
-
-  redoblona.classList.add("visible");
-
- }
-
+ card.querySelector(".redoblona")
+ .classList.toggle("oculto",tipo!=="redoblona");
 }
 
 
+function premio(btn,valor){
 
-/* PREMIOS */
+ let box=btn.parentElement;
 
-function elegirPremio(element,valor){
+ box.querySelectorAll(".btnop")
+ .forEach(x=>x.classList.remove("activo"));
 
- const card =
- element.closest(".jugada-card");
+ btn.classList.add("activo");
 
-
- card
- .querySelectorAll(".premio")
- .forEach(function(item){
-
-  item.classList.remove("seleccionado");
-
- });
-
-
- element.classList.add("seleccionado");
-
-
- card.querySelector(".premiosValor").value =
- valor;
-
+ btn.closest(".premios")
+ .querySelector(".hasta").value=valor;
 }
 
 
+function posicion(btn,tipo,valor){
 
-/* QUINIELAS */
+ let box=btn.parentElement;
 
-function toggleQuiniela(element){
+ box.querySelectorAll(".btnop")
+ .forEach(x=>x.classList.remove("activo"));
 
- element.classList.toggle("seleccionada");
+ btn.classList.add("activo");
 
+ btn.closest(".redoblona")
+ .querySelector("."+tipo).value=valor;
 }
 
 
+function todas(btn){
 
-function seleccionarTodas(button){
+ let card=btn.closest(".jugada");
 
- const card =
- button.closest(".jugada-card");
-
-
- card
- .querySelectorAll(".quiniela")
- .forEach(function(item){
-
-  item.classList.add("seleccionada");
-
- });
-
+ card.querySelectorAll(".quiniela")
+ .forEach(x=>x.classList.add("activo"));
 }
 
 
+function borrar(btn){
 
-function limpiarQuinielas(button){
+ let cards=document.querySelectorAll(".jugada");
 
- const card =
- button.closest(".jugada-card");
-
-
- card
- .querySelectorAll(".quiniela")
- .forEach(function(item){
-
-  item.classList.remove("seleccionada");
-
- });
-
-}
-
-
-
-/* MONTO */
-
-function elegirMonto(element,valor){
-
- const card =
- element.closest(".jugada-card");
-
-
- card
- .querySelectorAll(".montoBtn")
- .forEach(function(item){
-
-  item.classList.remove("seleccionado");
-
- });
-
-
- element.classList.add("seleccionado");
-
-
- card.querySelector(".monto").value =
- valor;
-
-}
-
-
-
-/* ELIMINAR */
-
-function eliminarJugada(button){
-
- const cards =
- document.querySelectorAll(".jugada-card");
-
-
- if(cards.length <= 1){
+ if(cards.length===1){
 
   alert("Debe quedar al menos una jugada.");
-
   return;
-
  }
 
-
- button
- .closest(".jugada-card")
- .remove();
-
+ btn.closest(".jugada").remove();
 }
 
 
+function formatoNumero(n){
 
-/* FORMATEAR NÚMERO */
-
-function formatearNumero(numero){
-
- if(!numero){
-
-  return "";
-
- }
-
-
- return String(numero).padStart(4,"0");
-
+ return String(n).padStart(4,"0");
 }
 
 
-
-/* GENERAR COMPROBANTE */
-
-function generarComprobante(){
+function comprobante(){
 
  if(!sorteoElegido){
 
   alert("Elegí primero el sorteo.");
-
   return;
-
  }
 
+ let cards=document.querySelectorAll(".jugada");
 
- const cards =
- document.querySelectorAll(".jugada-card");
+ let texto="";
 
+ let ahora=new Date();
 
- let lineas = [];
+ let fecha=ahora.toLocaleDateString("es-AR");
 
-
- const fecha =
- new Date();
-
-
- const fechaTexto =
- fecha.toLocaleDateString("es-AR");
-
-
- const horaTexto =
- fecha.toLocaleTimeString(
+ let hora=ahora.toLocaleTimeString(
  "es-AR",
  {
   hour:"2-digit",
@@ -1193,528 +583,183 @@ function generarComprobante(){
  }
  );
 
+ texto+="FECHA/HORA: "+fecha+" "+hora+"\n";
 
- lineas.push(
- "FECHA/HORA: " +
- fechaTexto +
- " " +
- horaTexto
- );
+ texto+="*** "+sorteoElegido+" ***\n";
 
+ texto+="*** 💋 LA REINA 832💋 ***\n";
 
- lineas.push(
- "*** " +
- sorteoElegido +
- " ***"
- );
+ texto+="==========================\n";
 
+ texto+="SEC: --------\n";
 
- lineas.push(
- "*** 💋 LA REINA 832💋 ***"
- );
+ texto+="PRIMERA: NQ\n";
+
+ let total=0;
+
+ let error=false;
 
 
- lineas.push(
- "=========================="
- );
+ cards.forEach(card=>{
 
-
- lineas.push(
- "SEC: --------"
- );
-
-
- lineas.push(
- "PRIMERA: NQ"
- );
-
-
- let total = 0;
-
- let hayError = false;
-
-
- cards.forEach(function(card){
-
-  const numero =
+  let numero=
   card.querySelector(".numero").value.trim();
 
+  let tipo=
+  card.querySelector(".tipo").value;
 
-  const modalidad =
-  card.querySelector(".modalidad").value;
-
-
-  const monto =
+  let monto=
   Number(card.querySelector(".monto").value);
 
-
-  const seleccionadas = [];
-
-
-  card
-  .querySelectorAll(".quiniela.seleccionada")
-  .forEach(function(item){
-
-   seleccionadas.push(
-    item.textContent.trim()
-   );
-
-  });
+  let seleccionadas=
+  [...card.querySelectorAll(".quiniela.activo")]
+  .map(x=>x.textContent.trim());
 
 
   if(
-   !numero ||
-   !modalidad ||
-   !monto ||
-   seleccionadas.length === 0
+   !numero||
+   !tipo||
+   !monto||
+   seleccionadas.length===0
   ){
 
-   hayError = true;
-
+   error=true;
    return;
-
   }
 
 
-  total +=
-  monto *
-  seleccionadas.length;
+  if(tipo==="cabeza"){
 
+   seleccionadas.forEach(q=>{
 
-  if(modalidad === "CABEZA"){
-
-   const numeroFormateado =
-   formatearNumero(numero);
-
-
-   seleccionadas.forEach(function(nombre){
-
-    lineas.push(
-     numeroFormateado +
-     " - 01 | $" +
-     monto
-    );
+    texto+=
+    formatoNumero(numero)+
+    " - 01 | $"+
+    monto+
+    "\n";
 
    });
 
+   total+=
+   monto*seleccionadas.length;
   }
 
 
-  if(modalidad === "PREMIOS"){
+  if(tipo==="premios"){
 
-   const premio =
-   card.querySelector(".premiosValor").value;
+   let hasta=
+   card.querySelector(".hasta").value;
 
+   if(!hasta){
 
-   if(!premio){
-
-    hayError = true;
-
+    error=true;
     return;
-
    }
 
 
-   const numeroFormateado =
-   formatearNumero(numero);
+   seleccionadas.forEach(q=>{
 
-
-   seleccionadas.forEach(function(nombre){
-
-    lineas.push(
-     numeroFormateado +
-     " - " +
-     String(premio).padStart(2,"0") +
-     " | $" +
-     monto
-    );
+    texto+=
+    formatoNumero(numero)+
+    " - "+
+    String(hasta).padStart(2,"0")+
+    " | $"+
+    monto+
+    "\n";
 
    });
 
+   total+=
+   monto*seleccionadas.length;
   }
 
 
-  if(modalidad === "REDOBLONA"){
+  if(tipo==="redoblona"){
 
-   const segundo =
-   card.querySelector(".segundoNumero").value.trim();
+   let segundo=
+   card.querySelector(".segundo").value.trim();
 
+   let p1=
+   card.querySelector(".p1").value;
 
-   const posicion1 =
-   card.querySelector(".posicion1").value;
-
-
-   const posicion2 =
-   card.querySelector(".posicion2").value;
+   let p2=
+   card.querySelector(".p2").value;
 
 
    if(!segundo){
 
-    hayError = true;
-
+    error=true;
     return;
-
    }
 
 
-   lineas.push("REDOBLONA");
+   texto+="REDOBLONA\n";
 
+   texto+=
+   numero+
+   " - "+
+   String(p1).padStart(2,"0")+
+   " |\n";
 
-   lineas.push(
-    numero +
-    " - " +
-    String(posicion1).padStart(2,"0") +
-    " |"
-   );
+   texto+=
+   segundo+
+   " - "+
+   String(p2).padStart(2,"0")+
+   " | $"+
+   monto+
+   "\n";
 
-
-   lineas.push(
-    segundo +
-    " - " +
-    String(posicion2).padStart(2,"0") +
-    " | $" +
-    monto
-   );
-
+   total+=monto;
   }
 
  });
 
 
- if(hayError){
+ if(error){
 
   alert(
-   "Revisá cada jugada: número, modalidad, quiniela y monto."
+   "Revisá que todas las jugadas tengan número, modalidad, quiniela y monto."
   );
 
   return;
-
  }
 
 
- lineas.push(
-  "TOTAL: $" +
-  total
- );
+ texto+="TOTAL: $"+total+"\n";
+
+ texto+="--------------------------\n";
+
+ texto+="GRACIAS POR SU JUGADA";
 
 
- lineas.push(
-  "--------------------------"
- );
+ ticketTexto=texto;
 
-
- lineas.push(
-  "GRACIAS POR SU JUGADA"
- );
-
-
- comprobanteTexto =
- lineas.join("\n");
-
-
- document.getElementById("comprobante")
- .textContent =
- comprobanteTexto;
+ document.getElementById("ticket")
+ .textContent=texto;
 
 }
 
 
+function enviar(){
 
-/* WHATSAPP */
+ comprobante();
 
-function enviarWhatsApp(){
-
- if(!comprobanteTexto){
-
-  generarComprobante();
-
- }
-
-
- if(!comprobanteTexto){
+ if(!ticketTexto){
 
   return;
-
  }
 
-
- const url =
- "https://wa.me/543517682897?text=" +
- encodeURIComponent(comprobanteTexto);
-
+ let url=
+ "https://wa.me/543517682897?text="+
+ encodeURIComponent(ticketTexto);
 
  window.open(url,"_blank");
-
 }
 
 
+agregar();
 
-/* GENERADOR */
+</script>
 
-function generarNumero(){
-
- const palabra =
- document.getElementById("palabra")
- .value.trim();
-
-
- if(!palabra){
-
-  alert("Escribí una palabra.");
-
-  return;
-
- }
-
-
- let total = 0;
-
-
- for(
-  let i=0;
-  i<palabra.length;
-  i++
- ){
-
-  total +=
-  palabra.charCodeAt(i);
-
- }
-
-
- const numero =
- String(
-  (total * 37) % 10000
- ).padStart(4,"0");
-
-
- document.getElementById(
- "numeroGenerado"
- ).textContent =
- numero;
-
-}
-
-
-
-/* ADMIN */
-
-function entrarAdmin(){
-
- const clave =
- document.getElementById("claveAdmin")
- .value;
-
-
- if(clave !== "832admin"){
-
-  alert("Contraseña incorrecta.");
-
-  return;
-
- }
-
-
- document.getElementById(
- "loginAdmin"
- ).style.display =
- "none";
-
-
- document.getElementById(
- "panelAdmin"
- ).style.display =
- "block";
-
-
- cargarAdmin();
-
-}
-
-
-
-function guardarCaliente(){
-
- const valor =
- document.getElementById("adminCaliente")
- .value;
-
-
- if(!valor){
-
-  alert("Ingresá un número.");
-
-  return;
-
- }
-
-
- localStorage.setItem(
-  "numeroCalienteLaReina",
-  valor
- );
-
-
- document.getElementById(
- "numeroCaliente"
- ).textContent =
- valor;
-
-
- alert(
-  "Número caliente guardado."
- );
-
-}
-
-
-
-function cargarAdmin(){
-
- const guardados =
- JSON.parse(
-  localStorage.getItem(
-   "resultadosLaReina"
-  ) || "{}"
- );
-
-
- let html = "";
-
-
- quinielas.forEach(function(nombre){
-
-  html += `
-  <div class="card">
-
-  <h3>${nombre}</h3>
-
-  <input
-  class="resultadoInput"
-  data-loteria="${nombre}"
-  placeholder="Ej: 1234 5678 9012">
-
-  </div>
-  `;
-
- });
-
-
- document.getElementById(
- "adminResultados"
- ).innerHTML =
- html;
-
-
- document.getElementById(
- "adminCaliente"
- ).value =
- localStorage.getItem(
-  "numeroCalienteLaReina"
- ) || "";
-
-}
-
-
-
-function guardarResultados(){
-
- const resultados = {};
-
-
- document
- .querySelectorAll(".resultadoInput")
- .forEach(function(input){
-
-  const nombre =
-  input.dataset.loteria;
-
-
-  const numeros =
-  input.value
-  .trim()
-  .split(/\s+/)
-  .filter(Boolean);
-
-
-  if(numeros.length){
-
-   resultados[nombre] =
-   numeros;
-
-  }
-
- });
-
-
- localStorage.setItem(
-  "resultadosLaReina",
-  JSON.stringify(resultados)
- );
-
-
- cargarResultados();
-
-
- alert(
-  "Resultados guardados correctamente."
- );
-
-}
-
-
-
-/* MOSTRAR RESULTADOS */
-
-function cargarResultados(){
-
- const guardados =
- JSON.parse(
-  localStorage.getItem(
-   "resultadosLaReina"
-  ) || "{}"
- );
-
-
- let html = "";
-
-
- quinielas.forEach(function(nombre){
-
-  html += `
-  <div class="card">
-
-  <h3>${nombre}</h3>
-  `;
-
-
-  if(guardados[nombre]){
-
-   html +=
-   '<div class="resultado">';
-
-
-   guardados[nombre]
-   .forEach(function(num){
-
-    html +=
-    "<strong>" +
-    num +
-    "</strong>";
-
-   });
-
-
-   html +=
-   "</div>";
-
-  }else{
-
-   html +=
-   '<p class="small">Sin resultados cargados.</p>';
-
-  }
-
-
-  html +=
-  "</div>"
+</body>
+ </html>
